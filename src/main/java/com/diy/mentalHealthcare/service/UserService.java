@@ -1,6 +1,7 @@
 package com.diy.mentalHealthcare.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class UserService {
 		return userRepo.findAll();
 	}
 	
-	public User getUserByEmail(String email) {
+	public Optional<User> getUserByEmail(String email) {
 		return userRepo.findByEmail(email);
 	}
 	
